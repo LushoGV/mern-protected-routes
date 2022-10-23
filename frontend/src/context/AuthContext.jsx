@@ -14,15 +14,15 @@ export const AuthProvider = ({ children }) => {
     },
   };
   const navigate = useNavigate(); 
-  let url = "http://localhost:3000/";
+  let api = import.meta.env.VITE_BACKEND_URL;
 
   const sendInfo = async (info, type) => {
     let newUrl = "";
 
     if (type === 1) {
-      newUrl = url + "login";
+      newUrl = api + "/login";
     } else {
-      newUrl = url + "register";
+      newUrl = api + "/register";
     }
 
     try {
