@@ -42,7 +42,7 @@ export const TasksProvider = ({ children }) => {
 
   const changeStatus = async (id, task) => {
     task.status = !task.status;
-    await axios.put(`${api}//edit/${id}`, task, config);
+    await axios.put(`${api}/edit/${id}`, task, config);
     getData();
   };
 
